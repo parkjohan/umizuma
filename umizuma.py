@@ -1,6 +1,3 @@
-"""
-all players throw out a single hand, each showing zero to five fingers, and call out their guess at what the sum of all fingers shown will be. If one player guesses the sum, that player earns one point. The first player to reach three points wins the game.
-"""
 
 """
 TODO:
@@ -13,22 +10,23 @@ class Umizuma:
     def __init__(self):
         self.player_tracker = 0
 
-    def intro_message(self):
-        print("--- WELCOME TO UMIZUMA ---")
-        # print("In this game, each player takes turns calling out a number.")
-        # print("The number being called out MUST be from 0 up to the number of players playing.")
+    def menu_display(self):
         print("\nPress 1 to view game instructions\nPress 2 to start a new game\nPress 3 to quit")
+    
+    def game_instructions(self):
+        print("\n--------------------\n\nAll players throw out their hand each showing zero or thumbs up for 1\nOne player calls out their guess of what the sum of all hands will be\nIf the player guesses the sum correctly, that player is either out, OR if there are only 2 players remaining, wins the round!\nThe first player to win 3 rounds wins the game!\n\n-------------------\n")
     
     def menu_selection(self):
         choices = [x for x in range(1, 4)]
+        print("--- WELCOME TO UMIZUMA ---")
         while True:
-            self.intro_message()
+            self.menu_display()
             user_choice = int(input())
             if user_choice not in choices:
                 print("Please only select 1, 2, or 3")
                 continue
             elif user_choice == 1:
-                print("Displaying game instructions")
+                self.game_instructions()
                 continue
             elif user_choice == 2:
                 print("Starting a new game...")
