@@ -23,11 +23,6 @@ class Umizuma:
     # randomize computer call 0-1
     # get user choice
     
-    def game_start(self):
-        time.sleep(0.5)
-        print("\n\numizuma...\n")
-        time.sleep(0.5)
-    
     def menu_selection(self):
         choices = [x for x in range(1, 4)]
         print("--- WELCOME TO UMIZUMA ---")
@@ -49,6 +44,12 @@ class Umizuma:
                 break
 
     def main_game_loop(self):
+        keep_playing = True
+        while keep_playing:
+            player1_choice = int(input())
+        time.sleep(0.5)
+        print("\n\numizuma...\n")
+        time.sleep(0.5)
         return False
 
 
