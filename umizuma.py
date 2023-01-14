@@ -1,3 +1,6 @@
+import time
+import sys
+import pytest
 
 """
 TODO:
@@ -15,6 +18,15 @@ class Umizuma:
     
     def game_instructions(self):
         print("\n--------------------\n\nAll players throw out their hand each showing zero or thumbs up for 1\nOne player calls out their guess of what the sum of all hands will be\nIf the player guesses the sum correctly, that player is either out, OR if there are only 2 players remaining, wins the round!\nThe first player to win 3 rounds wins the game!\n\n-------------------\n")
+
+    # logic for each round
+    # randomize computer call 0-1
+    # get user choice
+    
+    def game_start(self):
+        time.sleep(0.5)
+        print("\n\numizuma...\n")
+        time.sleep(0.5)
     
     def menu_selection(self):
         choices = [x for x in range(1, 4)]
@@ -30,10 +42,14 @@ class Umizuma:
                 continue
             elif user_choice == 2:
                 print("Starting a new game...")
+                self.game_start()
                 continue
             elif user_choice == 3:
                 print("Thanks for playing!")
                 break
+
+    def main_game_loop(self):
+        return False
 
 
 if __name__ == "__main__":
