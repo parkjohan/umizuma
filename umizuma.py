@@ -37,7 +37,7 @@ class Umizuma:
                 continue
             elif user_choice == 2:
                 print("Starting a new game...")
-                self.game_start()
+                self.main_game_loop()
                 continue
             elif user_choice == 3:
                 print("Thanks for playing!")
@@ -46,11 +46,9 @@ class Umizuma:
     def main_game_loop(self):
         keep_playing = True
         while keep_playing:
-            player1_choice = int(input())
-        time.sleep(0.5)
-        print("\n\numizuma...\n")
-        time.sleep(0.5)
-        return False
+            time.sleep(0.5)
+            print("\n\numizuma...\n")
+            time.sleep(0.5)
 
 
 if __name__ == "__main__":
